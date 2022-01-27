@@ -12,7 +12,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('employee name', () => {
+    describe('employee.name', () => {
         it('should set name property', () => {
             const name = 'Jane';
             const employee = new Employee(name);
@@ -20,7 +20,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('employee ID', () => {
+    describe('employee.id', () => {
         it('should set employee ID property', () => {
             const id = 1;
             const employee = new Employee('Jane', id);
@@ -28,7 +28,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('employee email', () => {
+    describe('employee.email', () => {
         it('should set employee email property', () => {
             const email = 'janedoe@gmail.com';
             const employee = new Employee('Jane', 1, email);
@@ -36,7 +36,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('get employee name', () => {
+    describe('getName', () => {
         it('should retrieve employee name property', () => {
             const name = 'Jane';
             const employee = new Employee(name, 1, 'janedoe@gmail.com');
@@ -44,7 +44,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('get employee id', () => {
+    describe('getId', () => {
         it('should retrieve employee ID property', () => {
             const id = 1;
             const employee = new Employee('Jane', id, 'janedoe@gmail.com');
@@ -52,7 +52,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('get employee email', () => {
+    describe('getEmail', () => {
         it('should retrieve employee email', () => {
             const email = 'janedoe@gmail.com';
             const employee = new Employee('Jane', 1, email);
@@ -60,7 +60,7 @@ describe('Employee', () => {
         });
     });
 
-    describe('get employee role', () => {
+    describe('getRole', () => {
         it('should display employee as the role', () => {
             const employee = new Employee();
             expect(employee.getRole()).toBe('Employee');

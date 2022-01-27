@@ -12,15 +12,15 @@ describe('Engineer', () => {
         });
     });
 
-    describe('engineer name', () => {
-        it('should set name property', () => {
+    describe('engineer.name', () => {
+        it('should set engineer name property', () => {
             const name = 'Jane';
             const engineer = new Engineer(name);
             expect(engineer.name).toBe(name);
         });
     });
 
-    describe('engineer ID', () => {
+    describe('engineer.id', () => {
         it('should set engineer ID property', () => {
             const id = 1;
             const engineer = new Engineer('Jane', id);
@@ -28,7 +28,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('engineer email', () => {
+    describe('engineer.email', () => {
         it('should set engineer email property', () => {
             const email = 'janedoe@gmail.com';
             const engineer = new Engineer('Jane', 1, email);
@@ -36,7 +36,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('engineer github', () => {
+    describe('engineer.github', () => {
         it('should set engineer github property', () => {
             const github = 'janedoe123';
             const engineer = new Engineer('Jane', 1, 'janedoe@gmail.com', github);
@@ -44,7 +44,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('get engineer name', () => {
+    describe('getName', () => {
         it('should retrieve engineer name property', () => {
             const name = 'Jane';
             const engineer = new Engineer(name, 1, 'janedoe@gmail.com');
@@ -52,7 +52,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('get engineer id', () => {
+    describe('getId', () => {
         it('should retrieve engineer ID property', () => {
             const id = 1;
             const engineer = new Engineer('Jane', id, 'janedoe@gmail.com');
@@ -60,7 +60,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('get engineer email', () => {
+    describe('getEmail', () => {
         it('should retrieve engineer email', () => {
             const email = 'janedoe@gmail.com';
             const engineer = new Engineer('Jane', 1, email);
@@ -68,7 +68,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('get engineer github', () => {
+    describe('getGithub', () => {
         it('should retrieve engineer github', () => {
             const github = 'janedoe123';
             const engineer = new Engineer('Jane', 1, 'janedoe@gmail.com', github);
@@ -76,7 +76,7 @@ describe('Engineer', () => {
         });
     });
 
-    describe('get engineer role', () => {
+    describe('getRole', () => {
         it('should display engineer as the role', () => {
             const engineer = new Engineer();
             expect(engineer.getRole()).toBe('Engineer');

@@ -12,15 +12,15 @@ describe('Intern', () => {
         });
     });
 
-    describe('intern name', () => {
-        it('should set name property', () => {
+    describe('intern.name', () => {
+        it('should set intern name property', () => {
             const name = 'Jane';
             const intern = new Intern(name);
             expect(intern.name).toBe(name);
         });
     });
 
-    describe('intern ID', () => {
+    describe('intern.id', () => {
         it('should set employee ID property', () => {
             const id = 1;
             const intern = new Intern('Jane', id);
@@ -28,7 +28,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('intern email', () => {
+    describe('intern.email', () => {
         it('should set intern email property', () => {
             const email = 'janedoe@gmail.com';
             const intern = new Intern('Jane', 1, email);
@@ -36,7 +36,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('intern school', () => {
+    describe('intern.school', () => {
         it('should set intern school property', () => {
             const school = 'university';
             const intern = new Intern ('Jane', 1, 'janedoe@gmail.com', school);
@@ -44,7 +44,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('get intern name', () => {
+    describe('getName', () => {
         it('should retrieve intern name property', () => {
             const name = 'Jane';
             const intern = new Intern(name, 1, 'janedoe@gmail.com');
@@ -52,7 +52,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('get intern id', () => {
+    describe('getId', () => {
         it('should retrieve intern ID property', () => {
             const id = 1;
             const intern = new Intern('Jane', id, 'janedoe@gmail.com');
@@ -60,7 +60,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('get intern email', () => {
+    describe('getEmail', () => {
         it('should retrieve intern email', () => {
             const email = 'janedoe@gmail.com';
             const intern = new Intern('Jane', 1, email);
@@ -68,7 +68,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('get intern school', () => {
+    describe('getSchool', () => {
         it('should retrieve intern school', () => {
             const school = 'university';
             const intern = new Intern('Jane', 1, 'janedoe@gmail.com', school);
@@ -76,7 +76,7 @@ describe('Intern', () => {
         });
     });
 
-    describe('get intern role', () => {
+    describe('getRole', () => {
         it('should display intern as the role', () => {
             const intern = new Intern();
             expect(intern.getRole()).toBe('Intern');
