@@ -1,3 +1,4 @@
+// adding required packages for the app to run
 const fs = require('fs');
 const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
@@ -5,8 +6,10 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const generatePage = require('./src/page-template')
 
+// establishing the array to push user input to
 const employeesArr = [];
 
+// first set of questions to prompt user for manager information
 const addManager = () => {
     return inquirer
         .prompt([
@@ -63,6 +66,7 @@ const addManager = () => {
                 }        
             },
         ])
+        // after the prompts it adds to the Manager class & pushes the input to the employee array, then calls addEmployee prompt
         .then(data => {
             let manager = new Manager(data.name, data.id, data.email, data.officeNumber);
             employeesArr.push(manager);
@@ -70,16 +74,18 @@ const addManager = () => {
         })
 }
 
+// prompt to give users the option to add an engineer, intern, or complete the team
 const addEmployee = () => {
     return inquirer
         .prompt([
             {
                 type: 'list',
                 name: 'addEmployee',
-                message: 'Would you like to add another memeber to your team?',
+                message: 'Would you like to add another member to your team?',
                 choices: ['Add an Engineer', 'Add an Intern', 'I am Finished Building my Team'],
             },
         ])
+        // app will respond based on the user's selection to call the appropriate next function
         .then(data => {
             if (data.addEmployee === 'Add an Engineer') {
                 console.log(`
@@ -108,7 +114,7 @@ const addEmployee = () => {
         });
 }
 
-
+// prompts for adding an Engineer to the team
 const addEngineer = () => {
     return inquirer
     .prompt([
@@ -172,6 +178,7 @@ const addEngineer = () => {
     })
 }
 
+// prompts for adding an Intern to the team
 const addIntern = () => {
     return inquirer
     .prompt([
@@ -235,6 +242,7 @@ const addIntern = () => {
     });
 }
 
+// writes the HTML file
 const writeToFile = (fileName, data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', data, err => {
@@ -250,4 +258,5 @@ const writeToFile = (fileName, data) => {
       });
 };
 
+// initializes the app
 addManager()

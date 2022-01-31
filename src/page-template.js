@@ -3,7 +3,7 @@ const fs = require('fs');
 const generatePage = (employeesArr) => {
     return employeesArr.map((data) => {
         let role = data.getRole();
-
+        // if object in employee array has the role 'manager' it will add this div to the HTML
         if(role === 'Manager') {
             return `
             <div class="column is-one-quarter">
@@ -20,6 +20,7 @@ const generatePage = (employeesArr) => {
             </div>
             </div>  
             `;
+        // if object in employee array has the role 'engineer' it will add this div to the HTML
         } else if (role === 'Engineer') {
             return `
             <div class="column is-one-quarter">
@@ -36,6 +37,7 @@ const generatePage = (employeesArr) => {
             </div>  
             </div>  
             `;
+        // if object in employee array has the role 'intern' it will add this div to the HTML
         } else {
             return `
             <div class="column is-one-quarter">
@@ -56,6 +58,7 @@ const generatePage = (employeesArr) => {
     })
 }
 
+// main HTML body template and renders generate page using page data
 module.exports = (pageData) => {
     return `
     <!DOCTYPE html>
