@@ -109,7 +109,6 @@ const addEngineer = () => {
 }
 
 const addIntern = () => {
-    console.log('add intern')
     return inquirer
     .prompt([
         {
