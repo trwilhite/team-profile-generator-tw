@@ -31,7 +31,7 @@ const generatePage = (employeesArr) => {
                 <div class="card-content">
                 <div class="content">ID: ${data.getId()}</div>
                 <div class="content">Email: <a href="mailto:${data.getEmail()}">${data.getEmail()}</a></div>
-                <div class="content">GitHub: <a href="https://www.github.com/${data.getGithub()}">${data.getGithub()}</a></div>
+                <div class="content">GitHub: <a href="https://www.github.com/${data.getGithub()}" target="_blank">${data.getGithub()}</a></div>
                 </div>
             </div>  
             </div>  
